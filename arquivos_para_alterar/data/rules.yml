@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+- rule: Responder a cumprimentos
+  steps:
+    - intent: cumprimentar
+    - action: utter_cumprimentar
+
+- rule: Responder a despedidas
+  steps:
+    - intent: despedida
+    - action: utter_despedida
+
+- rule: Responder sobre reciclagem
+  steps:
+    - intent: perguntar_reciclagem
+    - action: utter_resposta_reciclagem
+
+- rule: Responder sobre biodiversidade
+  steps:
+    - intent: perguntar_biodiversidade
+    - action: utter_resposta_biodiversidade
+
+- rule: Responder sobre impacto ambiental
+  steps:
+    - intent: perguntar_impacto_ambiental
+    - action: utter_resposta_impacto

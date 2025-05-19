@@ -1,0 +1,11 @@
+version: "3.1"
+
+stories:
+- story: conversa sobre reciclagem
+  steps:
+    - intent: cumprimentar
+    - action: utter_cumprimentar
+    - intent: perguntar_reciclagem
+    - action: utter_resposta_reciclagem
+    - intent: despedida
+    - action: utter_despedida

@@ -1,0 +1,28 @@
+version: "3.1"
+
+intents:
+  - cumprimentar
+  - despedida
+  - perguntar_reciclagem
+  - perguntar_biodiversidade
+  - perguntar_impacto_ambiental
+
+responses:
+  utter_cumprimentar:
+    - text: "Olá! Sou a EcoIA. Como posso te ajudar com temas ecológicos?"
+
+  utter_despedida:
+    - text: "Até mais! Cuide bem do nosso planeta 🌱"
+
+  utter_resposta_reciclagem:
+    - text: "Você pode reciclar papel, plástico, vidro e metal. Verifique os pontos de coleta seletiva na sua cidade."
+
+  utter_resposta_biodiversidade:
+    - text: "Biodiversidade é a variedade de vida no planeta. Ela mantém o equilíbrio dos ecossistemas."
+
+  utter_resposta_impacto:
+    - text: "O impacto ambiental inclui efeitos da poluição, desmatamento, e uso excessivo de recursos naturais."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

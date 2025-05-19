@@ -1,0 +1,34 @@
+version: "3.1"
+
+nlu:
+- intent: perguntar_reciclagem
+  examples: |
+    - como faço para reciclar plástico?
+    - onde posso reciclar papel?
+    - posso reciclar alumínio?
+    - quais materiais são recicláveis?
+
+- intent: perguntar_biodiversidade
+  examples: |
+    - o que é biodiversidade?
+    - por que a biodiversidade é importante?
+    - como podemos proteger a biodiversidade?
+
+- intent: perguntar_impacto_ambiental
+  examples: |
+    - o que é impacto ambiental?
+    - quais são os impactos da poluição?
+    - como a queimada afeta o meio ambiente?
+
+- intent: cumprimentar
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - e aí
+
+- intent: despedida
+  examples: |
+    - tchau
+    - até logo
+    - até mais
