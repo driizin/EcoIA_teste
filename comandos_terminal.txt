@@ -1,0 +1,47 @@
+py -3.10 -m venv venv-flask
+py -3.10 -m venv venv-rasa
+py -3.10 -m venv venv-vetores
+
+Vetores:
+Ativação: .\venv-vetores\Scripts\activate
+Requerimentos:
+pip install faiss-cpu
+pip install sentence_transformers
+pip install flask
+
+Flask:
+Ativação: .\venv-flask\Scripts\activate
+Requerimentos:
+pip install flask
+pip install "SQLAlchemy==1.4.54"
+pip install google.generativeai
+pip install openai
+pip install markdown
+pip install bleach
+pip install mysql
+pip install mysql-connector-python
+pip install dotenv
+pip install schedule
+pip install pyyaml
+pip install ruamel.yaml
+pip install spacy
+python -m spacy download pt_core_news_sm
+python -m spacy download en_core_web_sm
+Para rodar:
+python main.py
+
+Rasa:
+Ativação: .\venv-rasa\Scripts\activate
+Requerimentos:
+pip install rasa==3.6.10
+pip install "numpy>=1.25.2,<2.0.0"
+pip install numpy==1.23.5
+pip install tensorflow-intel==2.12.0
+pip uninstall tensorflow tensorflow-intel
+Para rodar:
+rasa init --no-prompt (iniciar projeto)
+rasa train
+rasa run --enable-api
+
+Chave API Key do ChatGPT: https://platform.openai.com/api-keys
+Python 3.10: https://www.python.org/downloads/release/python-3100/

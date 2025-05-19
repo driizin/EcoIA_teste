@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="icon" href="../static/imagem/logo.png" type="image/x-icon" />
+    <title>EcoIA</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-area">
+        <img id="ecoia" src="../static/imagem/logo.png" alt="EcoIA" />
+      </header>
+      <aside id="historyArea" class="history-area closed">
+        <div class="history-header">
+          <button id="toggleMenuBtn">&#9776;</button>
+          <button class="new-convo-btn" onclick="startNewConversation()">
+            <div class="new-convo-icon">
+              <span style="font-size: 2em; margin-right: 5px; color: #333"
+                >+</span
+              >
+            </div>
+            <div class="new-convo-text">
+              <span>Nova conversa</span>
+            </div>
+          </button>
+        </div>
+        <h3 class="recent-conversations-title">Recentes</h3>
+        <div id="historyBox"></div>
+      </aside>
+      <main class="chat-area">
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-area">
+          <label for="imageInput" class="image-upload-icon">📎</label>
+          <input
+            type="file"
+            id="imageInput"
+            accept="image/*"
+            style="display: none"
+          />
+          <div id="imagePreviewContainer"></div>
+          <textarea
+            id="userInput"
+            placeholder="Peça ao EcoIA"
+            rows="3"
+          ></textarea>
+          <button onclick="sendMessage()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M3.4 20.4L22 12 3.4 3.6 6.4 12 3.4 20.4Z" />
+            </svg>
+          </button>
+        </div>
+      </main>
+    </div>
+    <div id="renameConversationModal" class="modal">
+      <div class="modal-content">
+        <h2 class="modal-title">Renomear esta conversa</h2>
+        <div class="modal-input-area">
+          <label for="newConversationTitle">Novo título:</label>
+          <input type="text" id="newConversationTitle" />
+        </div>
+        <div class="modal-actions">
+          <button id="cancelRename">Cancelar</button>
+          <button id="confirmRename">Renomear</button>
+        </div>
+      </div>
+    </div>
+    <div id="deleteConfirmationModal" class="modal">
+      <div class="modal-content">
+        <h2 class="modal-title">Excluir bate-papo?</h2>
+        <p class="modal-message">
+          Você não vai ver mais esta conversa aqui. Essa ação também vai excluir
+          atividades relacionadas a ecologia
+        </p>
+        <div class="modal-actions">
+          <button id="cancelDelete">Cancelar</button>
+          <button id="confirmDelete">Excluir</button>
+        </div>
+      </div>
+    </div>
+    <div id="correctionModal" class="modal">
+      <div class="modal-content">
+        <h2 class="modal-title">Nos diga como podemos melhorar</h2>
+        <textarea
+          id="correctionText"
+          placeholder="Escreva aqui a resposta correta..."
+          rows="5"
+        ></textarea>
+        <div class="modal-actions">
+          <button id="cancelCorrection">Cancelar</button>
+          <button id="submitCorrection">Enviar Correção</button>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>
